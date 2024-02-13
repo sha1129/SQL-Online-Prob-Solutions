@@ -31,3 +31,8 @@ FROM Employee E LEFT JOIN mgmt M ON E.id = m.id
 SELECT B.name AS Employee 
 FROM Employee A JOIN Employee B
 ON A.id = b.managerId AND B.salary > A.salary
+
+--- Retry
+SELECT M.name as Employee 
+FROM Employee M JOIN Employee E
+    ON  M.managerId = E.id AND M.salary > E.salary
